@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shohei-mochizuki/challenge09-command-line-readme-generator/issues"
   },
-  "homepage": "https://github.com/shohei-mochizuki/challenge09-command-line-readme-generator#readme"
+  "homepage": "https://github.com/shohei-mochizuki/challenge09-command-line-readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
