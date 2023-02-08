@@ -40,10 +40,19 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license !== null){
-    return renderLicenseBadge(license) + renderLicenseLink(license)
-  } else {
-    return ""
+  switch (license) {
+    case "MIT": 
+      return "(https://opensource.org/licenses/MIT)"
+      break;
+    case "Apache":
+      return "(https://opensource.org/licenses/Apache-2.0)"
+      break;
+    case "GPL":
+      return "(https://www.gnu.org/licenses/gpl-3.0)"
+      break;
+    case null:
+      return ""
+      break;
   }
 }
 
@@ -69,7 +78,7 @@ ${data.usage}
 
 
 ## LICENSE 
-${data.license}
+${renderLicenseSection(data.license)}
 
 
 ## CONTRIBUTION 
