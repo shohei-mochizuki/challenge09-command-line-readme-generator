@@ -1,5 +1,4 @@
 // Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT": 
@@ -11,14 +10,13 @@ function renderLicenseBadge(license) {
     case "GPL":
       return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]"
       break;
-    case null:
+    case null: // If there is no license, return an empty string
       return ""
       break;
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Create a function that returns the license link
 function renderLicenseLink(license) {
   switch (license) {
     case "MIT": 
@@ -30,15 +28,13 @@ function renderLicenseLink(license) {
     case "GPL":
       return "(https://www.gnu.org/licenses/gpl-3.0)"
       break;
-    case null:
+    case null: // If there is no license, return an empty string
       return ""
       break;
   }
 }
 
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Create a function that returns the license section of README
 function renderLicenseSection(license) {
   switch (license) {
     case "MIT": 
@@ -69,19 +65,19 @@ function renderLicenseSection(license) {
       without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
       See the GNU General Public License for more details.`
       break;
-    case null:
+    case null: // If there is no license, return an empty string
       return ""
       break;
   }
 }
 
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.title} ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 
 ## DESCRIPTION 
-${data.descripton}
+${data.description}
 
 ## TABLE OF CONTENTS
 [INSTALLATION](#installation)<br>
@@ -108,9 +104,9 @@ ${data.contribution}
 ${data.test}
 
 ## QUESTIONS 
-If you have any questions, please feel free to reachout to me!<br>
+If you have any questions, please feel free to reach out to me!<br>
 GitHub page: [github.com/${data.github}](github.com/${data.github})<br>
-Email: ${data.email}
+Email: [${data.email}](mailto:${data.email})
 `;
 }
 
