@@ -55,23 +55,35 @@ function generateMarkdown(data) {
 ## DESCRIPTION 
 ${data.descripton}
 
+
+## TABLE OF CONTENTS
+
+
+
 ## INSTALLATION 
 ${data.installation}
+
 
 ## USAGE 
 ${data.usage}
 
+
+## LICENSE 
+${data.license}
+
+
 ## CONTRIBUTION 
 ${data.contribution}
 
-## TEST 
+
+## TESTS 
 ${data.test}
 
-## QUESTION 
-${data.github}
 
-## CONTACT
-${data.email}
+## QUESTIONS 
+If you have any questions, please feel free to reachout to me!
+GitHub page: ${data.github}
+Email: ${data.email}
 `;
 }
 
