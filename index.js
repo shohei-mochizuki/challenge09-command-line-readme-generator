@@ -36,24 +36,36 @@ inquirer
     {
       type: 'checkbox',
       message: 'Choose licenses?',
-      name: 'license_checkbox',
+      name: 'license',
       choices: ["MIT", "Mozilla", "IBM"],
     },
     {
-      type: 'list',
-      message: 'Choose licenses?',
-      name: 'license_list',
-      choices: ["MIT", "Mozilla", "IBM"],
+      type: 'input',
+      message: 'What is your GitHub username?',
+      name: 'username',
     },
     {
-      type: 'rawlist',
-      message: 'Choose licenses?',
-      name: 'license_rawlist',
-      choices: ["MIT", "Mozilla", "IBM"],
+      type: 'input',
+      message: 'What is your email address?',
+      name: 'email',
     },
   ])
-  .then((response) =>
-    // fs.appendFile(`${response.user_name}.txt`, JSON.stringify(response), (err) =>
-    // err ? console.error(err) : console.log('Input logged!')
-    console.log(response)
-  );
+  .then((response) => {
+    console.log(response);
+    let {title, description, installation, usage, contribution, test, license, username, email} = response;
+    let contents = 
+    `# ${title}
+
+## Description
+${description}
+
+## Installation
+${installation}
+    
+    
+    
+    
+    `;
+    fs.appendFile("sample_README.md", contents, (err) =>
+    err ? console.error(err) : console.log('README is successfully created!'));
+  });
