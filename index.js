@@ -48,7 +48,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    writeToFile("README.md", response); // Then sampleREADME.md file will be created
+    writeToFile("README_sample.md", response); // Then sampleREADME.md file will be created
   })
 }
 
