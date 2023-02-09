@@ -19,13 +19,13 @@ name: 'installation'},
 message: 'Please explain how to use it',
 name: 'usage'},
 {type: 'input',
-message: 'What is the guideline for contributions?',
+message: 'How can other engineers contribute to your application?',
 name: 'contribution'},
 {type: 'input',
-message: 'Explain how to test.',
+message: 'Please explain how to test this application.',
 name: 'test'},
 {type: 'list',
-message: 'Choose licenses?',
+message: 'Choose a license for your application.',
 name: 'license',
 choices: ["MIT", "Apache", "GPL"]},
 {type: 'input',
@@ -48,7 +48,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    writeToFile("sampleREADME.md", response); // Then sampleREADME.md file will be created
+    writeToFile("README.md", response); // Then sampleREADME.md file will be created
   })
 }
 
