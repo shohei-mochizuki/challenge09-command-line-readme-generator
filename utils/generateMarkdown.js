@@ -94,7 +94,7 @@ ${data.installation}
 ${data.usage}
 
 ## LICENSE 
-${data.license}:
+${data.license}:<br>
 ${renderLicenseSection(data.license)}
 
 ## CONTRIBUTION 
